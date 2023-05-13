@@ -1,0 +1,28 @@
+$placeholder_1: #ccc;
+
+.Input {
+	width: 100%;
+	max-width: 10rem;
+
+	padding: 0.7rem 1rem 0.7rem;
+	margin: 2rem 2rem 3rem;
+
+	border-radius: 0.4rem;
+	border: 1px solid transparent;
+
+	font: inherit;
+	box-shadow: rgba(99, 99, 99, 0.2) 0 0.1rem 0.5rem 0;
+
+	&:focus {
+		outline: none;
+		border: 1px solid #8ab590;
+	}
+	&::placeholder {
+		color: $placeholder_1;
+	}
+}
+@media (min-width: 55rem) {
+	.Input {
+		max-width: 20rem;
+	}
+}
