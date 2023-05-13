@@ -1,5 +1,5 @@
 export type Movie = {
-  id: string;
+  readonly id: string;
   title: string;
   poster: string;
   overview: string;
