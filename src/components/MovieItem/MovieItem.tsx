@@ -11,11 +11,12 @@ interface MovieItemProps {
 }
 
 const MovieItem = ({ movie, type, clickHandler }: MovieItemProps) => {
+
   const onClickHandler = () => {
     clickHandler(movie);
   };
 
-const movieReleased= `Release date: ${differenceInDays(new Date(), fromUnixTime(movie.release_date))} days ago.`
+const movieReleased = `Release date: ${differenceInDays(new Date(), fromUnixTime(movie.release_date))} days ago.`
 
   return (
     <li className={classes.MovieItem}>

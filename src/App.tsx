@@ -1,31 +1,45 @@
-import { useState } from "react";
+//import { useState } from "react";
 import classes from "./App.module.css";
-import { Movie, movies } from "./movies";
+import { Movie } from "./movies"; //movies
 import MovieList from "./components/MovieList/MovieList";
 import Input from "./components/UI/Input";
 import { MovieListType } from "./types/MovieListType";
 
+import { useAppDispatch, useAppSelector } from './hooks';
+import { addMovie, removeMovie, searchMovie } from "./redux/reducer/reducers";
+
 const App = () => {
-  const [leftMovieList, setLeftMovieList] = useState<Movie[]>(movies);
-  const [rightMovieList, setRightMovieList] = useState<Movie[]>([]);
-  const [search, setSearch] = useState<string>("");
+  //const [leftMovieList, setLeftMovieList] = useState<Movie[]>(movies);
+  //const [rightMovieList, setRightMovieList] = useState<Movie[]>([]);
+  //const [search, setSearch] = useState<string>("");
+
+  const dispatch = useAppDispatch();
+  const search = useAppSelector(state => state.movies.search);
+  const { rightMovieList, leftMovieList } = useAppSelector(state => state.movies);
 
   const onAddClick = (movie: Movie) => {
-    setRightMovieList((prevList) => [...prevList, movie]);
-    setLeftMovieList((prevList) =>
-      prevList.filter((item) => item.id !== movie.id)
-    );
+    dispatch(addMovie({movie}));
+      /*
+      setRightMovieList((prevList) => [...prevList, movie]);
+      setLeftMovieList((prevList) =>
+        prevList.filter((item) => item.id !== movie.id)
+      );
+      */
   };
 
   const onRemoveClick = (movie: Movie) => {
-    setLeftMovieList((prevList) => [...prevList, movie]);
-    setRightMovieList((prevList) =>
-      prevList.filter((item) => item.id !== movie.id)
-    );
+    dispatch(removeMovie({movie}));
+      /*
+      setLeftMovieList((prevList) => [...prevList, movie]);
+      setRightMovieList((prevList) =>
+        prevList.filter((item) => item.id !== movie.id)
+      );
+      */
   };
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value);
+    dispatch(searchMovie({search: e.target.value}));
+    //setSearch({search: e.target.value});
   };
 
   return (
