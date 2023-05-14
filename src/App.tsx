@@ -6,7 +6,7 @@ import Input from "./components/UI/Input";
 import { MovieListType } from "./types/MovieListType";
 
 import { useAppDispatch, useAppSelector } from './hooks';
-import { addMovie, removeMovie, searchMovie } from "./redux/reducer/reducers";
+import { addMovie, removeMovie, searchMovie } from "./store/reducer/reducers";
 
 const App = () => {
   //const [leftMovieList, setLeftMovieList] = useState<Movie[]>(movies);

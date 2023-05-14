@@ -15,7 +15,10 @@ $placeholder_1: #ccc;
 
 	&:focus {
 		outline: none;
-		border: 1px solid #8ab590;
+		border: 1px solid rgb(29, 31, 32);
+	}
+	&:hover {
+		box-shadow: 0 0 2rem 0 rgb(157, 172, 178);
 	}
 	&::placeholder {
 		color: $placeholder_1;
@@ -24,5 +27,11 @@ $placeholder_1: #ccc;
 @media (min-width: 55rem) {
 	.Input {
 		max-width: 20rem;
+	}
+}
+
+@media (max-width: 35rem) {
+	.Input {
+		margin-bottom: 1.3rem;
 	}
 }

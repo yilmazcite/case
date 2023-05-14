@@ -7,6 +7,7 @@ interface InputProps {
 }
 
 const Input = ({ placeholder, value, onChange }: InputProps) => {
+
   return (
     <input
       className={classes.Input}
