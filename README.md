@@ -1,5 +1,20 @@
 # SAN Frontend Assignment
 
+Projede TypeScript, React, SCSS, Redux ve Redux Toolkit kullanıldı.
+
+Projede yapılan geliştirmeler:
+
+- Type hataları düzeltildi ve TypeScript'e daha uyumlu hale getirildi.
+- Atomic Design Pattern uygulandı.
+- React best practice'lere uygun kullanıldı.
+- Tekrar kullanılabilir React bileşenleri oluşturuldu.
+- UI bileşenleri ile atomic design pattern desteklendi.
+- Temel düzeyde bir test oluşturuldu.
+- HTML Semantic Elementlerden yararlanıldı.
+- Görsel anlamda geliştirildi ve responsive hale getirildi.
+
+<hr/>
+
 ## Türkçe
 
 Bu egzersizde size hazır bir kod tabanına sahip bir proje sunuluyor. Sizden beklenen [Değerlendirme Kriterleri](#değerlendirme-kriterleri) bölümündeki maddeleri incelemeniz ve projede değişiklik yaparak maddeleri tamamlamnızdır. Bunun ardından [Teslim Etme](#teslim-etme) bölümündeki talimatlara uyarak sınavınızı bize teslim etmelisiniz.
