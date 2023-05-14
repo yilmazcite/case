@@ -2,6 +2,7 @@ $btn_text: rgb(255, 255, 255);
 $font-family_1: inherit;
 $bg_green: #8ab590;
 $bg_red: hsl(0, 100%, 68%);
+$btn_hover: #474d48;
 
 .Button {
 	position: absolute;
@@ -21,10 +22,28 @@ $bg_red: hsl(0, 100%, 68%);
 	color: $btn_text;
 	font-size: 1rem;
 	font-family: $font-family_1;
+	
+	&:hover {
+		background-color: $btn_hover;
+	}	
 }
 .Green {
 	background: $bg_green;
+
 }
 .Red {
 	background: $bg_red;
+
+}
+
+@media (max-width: 35rem) {
+	.Button {
+	min-width: 3rem;
+
+	bottom: 0.3rem;
+	right: 0.3rem;
+	padding: 0.4rem;
+
+	font-size: 0.8rem;
+	}
 }

@@ -22,7 +22,7 @@ const movieReleased = `Release date: ${differenceInDays(new Date(), fromUnixTime
     <li className={classes.MovieItem}>
       <section>
         <p className={classes.Title}>{movie.title}</p>
-        <span>
+        <span className={classes.ReleaseDate}>
           {movieReleased}
         </span>
       </section>
